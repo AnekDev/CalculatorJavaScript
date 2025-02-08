@@ -1,0 +1,106 @@
+@font-face{
+    font-family: CodeSaver;
+    src: url(./media/fonts/CodeSaver-Regular.otf);
+}
+
+@font-face{
+    font-family: Coolvetica;
+    src: url(./media/fonts/Coolvetica\ Rg\ Cond.otf);
+}
+
+:root{
+    /*Colors*/
+    --backgrounds: #181511;
+    --numbers: #413E3A;
+    --operations: #EB6B38;
+    --conditions: #6399C9;
+    --primary: ;
+    --secondary: ;
+    --lightText: whitesmoke;
+    --darckText: ;
+    /*Fonts*/
+    --calc: CodeSaver;
+    --titles: Coolvetica;
+}
+
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    font-family: var(--titles);
+}
+
+.calculato{
+    display: grid;
+    column-gap: 5px;
+    row-gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: min-content;
+    margin: auto;
+    font-size: 1.5em;
+    background-color: var(--backgrounds);
+    padding: 7px;
+    border-radius: 10px;
+    font-family: var(--calc);
+}
+
+.display{
+    grid-column: 1 / 5;
+    text-align: right;
+    background-color: var(--backgrounds);
+    color: var(--lightText);
+    gap: 0px;
+    font-size: 1.5em;
+    padding: 20px 20px;
+    font-family: var(--calc);
+    min-height: 110px;
+}
+
+.last{
+    font-size: 0.5em;
+    color: var(--lightText);
+}
+
+button{
+    height: 60px;
+    width: 70px;
+    font-size: 1em;
+    
+    border-radius: 5px;
+    border: none;
+    color: var(--lightText);
+    font-family: var(--calc);
+}
+
+button[class^=number],.speNum{
+    background-color: var(--numbers) !important;
+}
+
+button[class^=number]:hover,.speNum:hover{
+    background-color: #332E25 !important;
+}
+
+button[class^=operation]{
+    background-color: var(--operations);
+}
+
+button[class^=operation]:hover{
+    background-color: #934323;
+}
+
+button[class^=button]{
+    background-color: var(--conditions);
+}
+
+button[class^=button]:hover{
+    background-color: #385772;
+}
+
+h1{
+    margin: auto;
+    font-size: 4em;
+}
