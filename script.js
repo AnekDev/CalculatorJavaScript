@@ -118,7 +118,6 @@ function operacion(op) {
             console.log(last.innerHTML.slice(-1));
             display.innerHTML = operacion(last.innerHTML.slice(-1));
             restart = true;
-            
             break;
         default:
             break;
